@@ -1,3 +1,11 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +43,80 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+main{
+    height: 70vh;
+    width: 40vw;
+    background-color: #485368;
+}
+
+.AddTasks{
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.AddTasks > input{
+  height: 4vh;
+  width: 40%;
+  font-size: 17px;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.AddTasks > button{
+  height: 4vh;
+  width: 15%;
+  font-size: 17px;
+  font-family: monospace;
+  font-weight: 600;
+  background-color: #19718a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 7%;
+}
+
+.tasksContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-top: 2rem;
+
+}
+
+.textTasks{
+  font-size: 17px;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.removeTasksBtn{
+  text-align: center;
+  height: 4vh;
+  font-size: 17px;
+  font-family: monospace;
+  font-weight: 600;
+  background-color: #912c2c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 7%;
+}
+
+.checkboxTasks{
+  width: 3vh;
+  height: 3vh;
+  cursor: pointer;
+}
+
+.tasks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
