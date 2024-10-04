@@ -78,9 +78,9 @@ function App() {
       </div>
       <div className='tasksContainer'>
         {tasks.map(task => (
-          <div className='tasks' key={task.id} style={{textDecoration: task.completed? 'line-through' : 'none'}} >
+          <div className='tasks' key={task.id} >
             <input className='checkboxTasks' type="checkbox" checked={task.completed} onChange={() => toggleCompleted(task.id)}/>
-            <span className='textTasks'>{task.text}</span>
+            <span className='textTasks' style={{color: task.completed? '#2bda31' : '#6da7ac', important: true}}>{task.text}</span>
             <button onClick={() => removeTask(task.id)} className='removeTasksBtn'>Remove</button>
           </div>
         ))}
