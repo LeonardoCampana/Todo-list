@@ -11,6 +11,9 @@ function App() {
   const xpToNextLevel = 100 + (level * 50);
 
   function addTask(text) {
+    if (text === '') {
+      return;
+    }
       const newTask = {
         id: Date.now(),
         text: text,
@@ -39,19 +42,22 @@ function App() {
       return task;
     }))
   }
-  // TODO : BUG DE VOLTAR DE NIVEL A RESOLVER
   function ganhoXp(xpGanho) {
-    const newXp = xp + xpGanho;
-    if (newXp < 0) {
-      setLevel(Math.max(0, level - 1)); // Decrementa o nível se o XP cair abaixo de 0
-      setXp((100 + (level * 50)) - xpPerTask); // Reseta o XP para 0
-    } else {
-      setXp(newXp);
-      if (newXp >= xpToNextLevel) {
-        setLevel(level + 1)
-        setXp(0)
-      }
+    let newXp = xp + xpGanho;
+    let newLevel = level;
+  
+    while (newXp < 0 && newLevel > 0) {
+      newLevel--;
+      newXp += (100 + (newLevel * 50));
     }
+  
+    while (newXp >= (100 + (newLevel * 50))) {
+      newXp -= (100 + (newLevel * 50));
+      newLevel++;
+    }
+  
+    setXp(newXp);
+    setLevel(newLevel);
   }
 
   return (
