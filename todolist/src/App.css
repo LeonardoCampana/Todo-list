@@ -190,7 +190,7 @@ main{
 
 @media (min-width: 768px) {
   main {
-    width: 40vw;
+    width: 70vw;
     height: 70vh;
   }
 
@@ -211,12 +211,66 @@ main{
     height: 70vh;
   }
 
+  h1{
+    font-size: 40px;
+  }
+
+  span{
+    font-size: 20px;
+  }
+
+  .textTasks{
+    font-size: 25px;
+  }
+
   .xpBarContainer{
     width: 15vw;
   }
 
   .AddTasks > input{
     width: 30%;
+  }
+
+}
+
+@media (min-width: 2560px) {
+  main {
+    width: 40vw;
+    height: 70vh;
+  }
+
+  h1{
+    font-size: 50px;
+  }
+
+  span{
+    font-size: 30px;
+  }
+
+  .xpBar{
+    height: 6vh;
+  }
+
+  .textTasks{
+    font-size: 50px;
+  }
+
+  .xpBarContainer{
+    width: 15vw;
+  }
+
+  .AddTasks > input{
+    width: 30%;
+  }
+
+  .AddTasks > button{
+    font-size: 30px;
+    height: 7vh;
+  }
+
+  .removeTasksBtn{
+    font-size: 35px;
+    height: 8vh;
   }
 
 }
